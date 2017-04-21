@@ -1,0 +1,3 @@
+esdoc-demo-plugin
+===
+
