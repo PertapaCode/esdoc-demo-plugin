@@ -46,7 +46,7 @@ window.demo = {
     element.appendChild(iframeEl)
 
     // set default code
-    this.editor.setValue(options.code)
+    this.editor.setValue(options.code, -1)
 
     editorButtons.run.addEventListener('click',
       this.updateIframe.bind(this, iframeEl))
