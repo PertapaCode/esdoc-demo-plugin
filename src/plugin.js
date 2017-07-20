@@ -66,7 +66,7 @@ module.exports = class {
     `
 
     // write demo page
-    fs.writeFile(path.resolve(process.cwd(), './doc/script/demo/' + componentName + '.html'), demoHTML)
+    fs.writeFile(path.resolve(process.cwd(), './docs/script/demo/' + componentName + '.html'), demoHTML)
 
     // modify esdoc page head with demo
     let esdocHTML = `
@@ -93,13 +93,13 @@ module.exports = class {
     // copy demo.js to be used by the esdoc pages
     fs.copySync(
       path.resolve(process.cwd(), './node_modules/esdoc-demo-plugin/src/demo.js'),
-      path.resolve(process.cwd(), './doc/script/demo/index.js')
+      path.resolve(process.cwd(), './docs/script/demo/index.js')
     )
 
     // copy ace to be used by the esdoc pages
     fs.copySync(
       path.resolve(process.cwd(), './node_modules/esdoc-demo-plugin/node_modules/ace/build/src-min'),
-      path.resolve(process.cwd(), './doc/script/demo/ace')
+      path.resolve(process.cwd(), './docs/script/demo/ace')
     )
 
     // copy dependencies
@@ -109,7 +109,7 @@ module.exports = class {
 
       fs.copySync(
         path.resolve(process.cwd(), scriptPath),
-        path.resolve(process.cwd(), './doc/script/demo/' + fileName)
+        path.resolve(process.cwd(), './docs/script/demo/' + fileName)
       )
     }
   }

@@ -77,8 +77,8 @@ window.demo = {
       ? document.referrer
       : document.location.href
 
-    if (demoURL.indexOf('/doc/') !== -1) {
-      demoURL = demoURL.substring(0, demoURL.indexOf('/doc/') + 5)
+    if (demoURL.indexOf('/docs/') !== -1) {
+      demoURL = demoURL.substring(0, demoURL.indexOf('/docs/') + 6)
     } else {
       demoURL = demoURL.substring(0, demoURL.indexOf('/class/'))
       demoURL += '/'
