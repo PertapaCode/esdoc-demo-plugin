@@ -71,9 +71,9 @@ module.exports = class {
     // modify esdoc page head with demo
     let esdocHTML = `
       <script src="script/demo/index.js"></script>
-      <script src="script/demo/ace/ace.js"></script>
-      <script src="script/demo/ace/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
-      <script src="script/demo/ace/theme-monokai.js" type="text/javascript" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/ace.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.8/theme-monokai.js" type="text/javascript" charset="utf-8"></script>
       <script>
         window.demo.exec(${JSON.stringify(opts)});
       </script>
@@ -94,12 +94,6 @@ module.exports = class {
     fs.copySync(
       path.resolve(process.cwd(), './node_modules/esdoc-demo-plugin/src/demo.js'),
       path.resolve(process.cwd(), './docs/script/demo/index.js')
-    )
-
-    // copy ace to be used by the esdoc pages
-    fs.copySync(
-      path.resolve(process.cwd(), './node_modules/esdoc-demo-plugin/node_modules/ace/build/src-min'),
-      path.resolve(process.cwd(), './docs/script/demo/ace')
     )
 
     // copy dependencies
